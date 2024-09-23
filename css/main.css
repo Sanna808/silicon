@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
-  --color-dark: #0B0F19;
   --color-primary: #6366F1;
-  --color-gray: #9397AD;
   --color-white: #FFFFFF;
   --color-gray1: #F3F6FF;
+  --color-gray2: #EFF2FC;
+  --color-gray3: #E2E5F1;
+  --color-gray4: #D4D7E5;
+  --color-gray5: #B4B7C9;
+  --color-gray6: #9397AD;
   --color-gray7: #565973;
-
-  --color-border-gray: #E2E5F1;
+  --color-gray8: #33354D;
+  --color-gray9: #0B0F19;
 
   --containder-padding: 1rem;
   --transition-time: all 0.2s;
 }
-
 
 * {
   box-sizing: border-box;
@@ -29,7 +31,13 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 1rem;
+}
+
+.h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-gray9)
 }
 
 .wrapper {
@@ -66,7 +74,7 @@ a:hover {
   text-decoration: none;
 }
 .btn-primary:hover {
-  background-color: var(--color-gray);
+  background-color: var(--color-gray6);
   color: var(--color-white);
   text-decoration: none;
 }
@@ -75,7 +83,7 @@ a:hover {
 }
 
 .btn-download-app {
-  background-color: var(--color-dark);
+  background-color: var(--color-gray9);
   color: var(--color-white);
   border-radius: 8px;
   padding: 12px 25px;
@@ -103,9 +111,9 @@ a:hover {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 1px solid var(--color-border-gray);
+  border: 1px solid var(--color-gray3);
   background-color: var(--color-white);
-  color: var(--color-dark);
+  color: var(--color-gray9);
 }
 
 .btn-toggle-switch {
@@ -149,7 +157,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-gray);
+  background-color: var(--color-gray6);
   transition: all 0.2s;
 }
 
@@ -177,7 +185,7 @@ a:hover {
 }
 
 .nav-link {
-  color: var(--color-dark);
+  color: var(--color-gray9);
   font-weight: 600;
   text-decoration: none;
 }
@@ -209,7 +217,7 @@ footer {
   font-size: 14px;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: var(--color-gray);
+  color: var(--color-gray6);
 
   .container {
     display: flex;
@@ -304,7 +312,7 @@ footer {
     }
 
     .discover-more {
-      color: var(--color-dark);
+      color: var(--color-gray9);
       display: flex;
       align-items: center;
       gap: 1rem;
@@ -379,7 +387,7 @@ footer {
 }
 
 .brand-box {
-  border: 1px solid var(--color-border-gray);
+  border: 1px solid var(--color-gray3);
   border-radius: 8px;
   height: 100px;
   width: 200px;
@@ -443,13 +451,11 @@ footer {
   }
 }
 
-/* App features section  */
+/* App features section start  */
 
 #app-features {
 
   h2 {
-    font-size: 40px;
-    font-weight: 800;
     margin-bottom: 1rem;
     text-align: center;
   }
@@ -462,7 +468,7 @@ footer {
   }
   .text-1 {
     font-size: 18px;
-    color: var(--color-gray);
+    color: var(--color-gray6);
     margin-bottom: 3rem;
     text-align: center;
   }
@@ -529,7 +535,10 @@ footer {
   }
 }
 
-/* Payments section */
+/* App features section end  */
+
+
+/* Payments section start */
 
 #payments {
   display: none;
@@ -585,6 +594,8 @@ footer {
   }
 }
 
+/* Payments section end */
+
 /* Client section */
 
 #reviews {
@@ -603,8 +614,6 @@ footer {
 
     .headline {
       h2 {
-        font-size: 40px;
-        font-weight: 700;
         margin-top: 0;
       }
     }
@@ -620,7 +629,7 @@ footer {
 
     .role {
       font-size: 14px;
-      color: var(--color-gray);
+      color: var(--color-gray6);
     }
   }
 
