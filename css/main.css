@@ -226,10 +226,6 @@ footer {
     gap: 5px;
   }
 
-  .copyright{
-
-  }
-
   .credit {
     display: none;
   }
@@ -537,6 +533,64 @@ footer {
 
 /* App features section end  */
 
+/* Carousel section start  */
+
+#carousel-section {
+  background-color: var(--color-gray1);
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  text-align: center;
+
+  h2 {
+    padding-bottom: 1rem;
+    font-size: 2.2rem;
+
+  }
+  h3 {
+    font-size: 1.5rem;
+    color: var(--color-gray9);
+    margin-bottom: .5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: var(--color-gray7);
+  }
+}
+
+.caurusel {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.bottom {
+  max-width: 70ch;
+  margin-inline: auto;
+}
+
+.iphone-1,
+.iphone-3 {
+display: none;
+}
+
+@media (min-width: 768px) {
+  .iphone-1,
+  .iphone-3 {
+  display: block;
+  }
+}
+
+@media (min-width: 1320px) {
+  .iphone-2 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+
+
+/* Carousel section end  */
 
 /* Payments section start */
 
