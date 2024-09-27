@@ -745,3 +745,14 @@ display: none;
     }
   }
 }
+
+/* FAQ section start */
+
+#questions {
+  .container {
+    display:flex
+  }
+}
+
+
+/* FAQ section end */
