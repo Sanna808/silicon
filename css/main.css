@@ -213,23 +213,7 @@ header .container {
   padding-bottom: 1rem;
 }
 
-footer {
-  font-size: 14px;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  color: var(--color-gray6);
 
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .credit {
-    display: none;
-  }
-}
 
 /* Hero section */
 
@@ -749,49 +733,37 @@ display: none;
 /* FAQ section start */
 
 #questions {
-  padding: 5rem;
-
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 5rem;
-    max-width: 1300px;
-
-  }
-
-  .contact-info {
-    margin-left: 3rem;
-    margin-right: 3rem;
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "text text"
-                         "box-1 box-2";
-  }
+  
+  padding-top: 4rem;
+  padding-bottom: 2rem;
   
   .text {
-    grid-area: text;
-    padding-bottom: 1.5rem;
+    padding-bottom: 4em;
 
     h2 {
       margin-top: 0;
+      font-size: 2rem;
+      font-weight: 800;
+      text-align: center;
+    }
+    .text-1 {
+      font-size: 1.2rem;
+      text-align: center;
     }
   }
-  h2 {
-    font-size: 2rem;
-    font-weight: 800;
-  }
-  .text-1 {
-    font-size: 1.2rem;
+
+
+
+  .contact-box {
+    display:none;
   }
 
   .contact-box-1,
-  .contact-box-2{
+  .contact-box-2 {
     border: 1px solid var(--color-gray3);
     border-radius: 8px;
-    height: 170px;
-    width: 210px;
-
+    width: 330px;
+    height: 160px;
     padding-left: 1.5rem;
     padding-top: 1.5rem;
 
@@ -820,13 +792,14 @@ display: none;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding-bottom: 4rem;
 
     .box-faq {
       padding: .5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      max-width: 600px;
+      max-width: 700px;
       border: none;
       box-shadow: 0 3px 5px #0b0f191a;
 
@@ -849,14 +822,238 @@ display: none;
 
     }
   }
+
+  .button {
+    display: flex;
+    justify-content: center;
+  } 
+
   #contact {
     max-width: 160px;
-
     span {
       font-size: 14px;
     }
   }
+
+  @media (min-width: 768px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: "text"
+                           "faq"
+                           "contact";  
+    }
+
+    .contact-box {
+      grid-area: contact;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+
+    .button {
+      display: none;
+    }
+
+  }
+
+  @media (min-width: 1320px) {
+    margin-left: 5rem;
+
+    .container {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr 2fr;
+      grid-template-areas: "text faq"
+                           "contact faq";
+      
+      max-width: 1300px;
+    }
+
+    .text {
+      grid-area: text;
+      padding-bottom: 0;
+      margin-bottom: 0;
+
+      h2 {
+        text-align: left;
+      }
+       .text-1 {
+        text-align: left;
+       }
+    }
+
+    
+    .faq {
+      grid-area: faq;
+      padding-left: 3rem;
+    }
+
+    .contact-box-1,
+    .contact-box-2 {
+      width: 200px;
+    }
+      
+  }
+}
+/* FAQ section end */
+
+/* Start subscribe section  */
+
+ #subscribe {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+  .container {
+    background-color: var(--color-gray1);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: .5em;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "not sub"
+                         "email email";
+  }
+
+  .notification {
+    grid-area: not;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .text-2 {
+    display: none;
+  } 
+
+  .newsletter {
+    grid-area: sub;
+  }
+
+  .sub-btn {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: .8em 1em;
+    border: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: .5em;
+  }
+  .sub-btn:hover {
+    background-color: var(--color-gray6);
+  }
+
+  .form-input {
+    border: 1px solid var(--color-gray4);
+    font-size: 1rem;
+    padding: .3em;
+
+    border-radius: .5em;
+  }
+
+  .input-group {
+    display: flex;
+
+    .form-input {
+      border-radius: .5em 0 0 .5em;
+    }
+
+    .sub-btn {
+      border-radius: 0 .5em .5em 0;
+    }
+  }
+
+  .input-email {
+    grid-area: email;
+  }
+  .input-group {
+    position: relative;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: .5rem;
+    color: var(--color-gray5);
+
+    transform: translateY(-50%);
+  }
+  input::placeholder {
+    color: var(--color-gray5);
+  }
+
+  .email{
+    padding-left: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr 2fr 3fr;
+      grid-template-areas: "not sub email";
+    }
+    .input-email {
+      padding-top: 1rem;
+    }
+  }
+
+  @media (min-width: 1320px) {
+
+    .container {
+      max-width: 1200px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 3fr 3fr;
+      grid-template-areas: "not sub email";
+    }
+
+    .text-1 {
+      display: none;
+    }
+    .text-2 {
+      display: block;
+    }
+
+    .notification {
+      padding-left: 4rem;
+    }
+  }
+
+ }
+
+ /* End subscribe section  */
+
+
+ /* Start footer section  */
+
+ footer {
+  font-size: 14px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: var(--color-gray6);
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .credit {
+    display: none;
+  }
+
+  @media (min-width: 1320px) {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
 }
 
-
-/* FAQ section end */
+/* End footer section  */
