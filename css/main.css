@@ -19,8 +19,12 @@
   --clr-text-nav: var(--color-gray8);
   --clr-text-light: var(--color-gray6);
   --clr-btn-circle: var(--color-white);
+  --clr-download-btn: var(--color-gray9);
+  --bg-box: var(--color-white);
+  --border-color: var(--color-gray3);
+  --border-color-2: var(--color-gray4);
 
-  --containder-padding: 1rem;
+  --container-padding: 1rem;
   --transition-time: all 0.2s;
 }
 
@@ -35,9 +39,27 @@
   --clr-text-heading: var(--color-white);
   --clr-text-nav: var(--color-white);
   --clr-text-light:var(--color-gray6);
-  --clr-btn-circle: rgb(255, 255, 255, 0.5);
+  --clr-btn-circle: rgba(255, 255, 255, 0.05);
+  --clr-download-btn: #F3F6FF;
+  --bg-box: rgba(255, 255, 255, 0.04);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --border-color-2: rgba(255, 255, 255, 0.2);
 
   color-scheme: dark;
+
+  .show-light {
+    display: none;
+  }
+  .show-dark {
+    display: block;
+  }
+}
+
+.show-light {
+  display: block;
+}
+.show-dark {
+  display: none;
 }
 
 html {
@@ -77,8 +99,8 @@ h1, h2, h3, h4 {
 
 .container {
   width: 100%;
-  padding-left: var(--containder-padding);
-  padding-right: var(--containder-padding);
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
   margin-left: auto;
   margin-right: auto;
 }
@@ -89,7 +111,6 @@ a {
 }
 a:hover {
   color: var(--color-primary);
-  text-decoration: underline;
 }
 
 .btn-primary {
@@ -112,7 +133,7 @@ a:hover {
 }
 
 .btn-download-app {
-  background-color: var(--color-gray9);
+  background-color: var(--clr-download-btn);
   color: var(--color-white);
   border-radius: 8px;
   padding: 12px 25px;
@@ -140,9 +161,13 @@ a:hover {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 1px solid var(--color-gray3);
+  box-shadow: 0 3px 5px #0b0f191a;
   background-color: var(--clr-btn-circle);
-  color: var(--color-gray9);
+}
+
+.btn-circle:hover {
+  background-color: var(--color-gray6);
+  color: var(--color-white);
 }
 
 .btn-toggle-switch {
@@ -397,7 +422,7 @@ header .container {
 }
 
 .brand-box {
-  border: 1px solid var(--color-gray3);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   height: 100px;
   width: 200px;
@@ -662,7 +687,10 @@ display: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.5rem;
-    padding: 5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
 
     .headline {
       h2 {
@@ -685,7 +713,7 @@ display: none;
   }
 
   .review-1 {
-    background: var(--clr-bg);
+    background: var(--bg-box);
     padding: 1.5rem;
     border-radius: .5rem;
     box-shadow: 0 5px 5px #9397ad25;
@@ -715,7 +743,7 @@ display: none;
   }
 
   .review-2 {
-    background: var(--clr-bg);
+    background: var(--bg-box);
     padding: 1.5rem;
     border-radius: .5rem;
     box-shadow: 0 5px 5px #9397ad25;
@@ -775,7 +803,7 @@ display: none;
 
   .contact-box-1,
   .contact-box-2 {
-    border: 1px solid var(--color-gray3);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     width: 330px;
     height: 160px;
@@ -788,6 +816,10 @@ display: none;
 
     p {
       padding-bottom: 1.5rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
     }
 
     .contact-us-1 {
@@ -817,6 +849,7 @@ display: none;
       max-width: 700px;
       border: none;
       box-shadow: 0 3px 5px #0b0f191a;
+      background-color: var(--bg-box);
 
       p {
         padding-left: .5rem;
@@ -824,18 +857,17 @@ display: none;
         font-weight: 600;
       }
 
-      .btn-circle {
-        border: none;
-        background-color: var(--color-gray1);
-        cursor: pointer;
-      }
-
-      .btn-circle:hover {
-        background-color: var(--color-gray6);
-        color: var(--color-white);
-      }
-
     }
+  }
+
+  .btn-circle {
+    border: none;
+    background-color: var(--color-gray1);
+    cursor: pointer;
+  }
+  .btn-circle:hover {
+    background-color: var(--color-gray6);
+    color: var(--color-white);
   }
 
   .button {
@@ -958,9 +990,10 @@ display: none;
   }
 
   .form-input {
-    border: 1px solid var(--color-gray4);
+    border: 1px solid var(--border-color-2);
     font-size: 1rem;
     padding: .3em;
+    width: 200px;
 
     border-radius: .5em;
   }
