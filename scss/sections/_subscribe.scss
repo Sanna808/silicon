@@ -1,0 +1,127 @@
+#subscribe {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+  .container {
+    background-color: var(--color-gray1);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-radius: .5em;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:  "icon sub"
+                          "email email";
+  }
+
+  .notification {
+    grid-area: icon;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+
+  .text-2 {
+    display: none;
+  } 
+
+  .newsletter {
+    grid-area: sub;
+  }
+
+  .sub-btn {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: .8em 1em;
+    border: 0;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: .5em;
+  }
+  .sub-btn:hover {
+    background-color: var(--color-gray6);
+  }
+
+  .form-input {
+    border: 1px solid var(--border-color-2);
+    font-size: 1rem;
+    padding: .3em;
+    width: 200px;
+
+    border-radius: .5em;
+  }
+
+  .input-group {
+    display: flex;
+
+    .form-input {
+      border-radius: .5em 0 0 .5em;
+    }
+
+    .sub-btn {
+      border-radius: 0 .5em .5em 0;
+    }
+  }
+
+  .input-email {
+    grid-area: email;
+  }
+  .input-group {
+    position: relative;
+  }
+
+  .icon {
+    position: absolute;
+    top: 50%;
+    left: .5rem;
+    color: var(--color-gray5);
+
+    transform: translateY(-50%);
+  }
+  input::placeholder {
+    color: var(--color-gray5);
+  }
+
+  .email{
+    padding-left: 2rem;
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr 2fr 3fr;
+      grid-template-areas: "icon sub email";
+    }
+    .input-email {
+      padding-top: 1rem;
+    }
+  }
+
+  @media (min-width: 1320px) {
+
+    .container {
+      max-width: 1200px;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 3fr 3fr;
+      grid-template-areas: "icon sub email";
+    }
+
+    .text-1 {
+      display: none;
+    }
+    .text-2 {
+      display: block;
+    }
+
+    .notification {
+      padding-left: 4rem;
+    }
+  }
+ }

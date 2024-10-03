@@ -1,0 +1,52 @@
+#payments {
+  display: none;
+
+  @media (min-width: 1320px) {
+    display: block;
+
+  }
+
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .btn-primary i {
+    margin-left: .7rem;
+  }
+  #learn-more {
+    width: 170px;
+  }
+
+  .container {
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+  
+  .transfer {
+    margin-top: 3rem;
+
+    .list {
+      display: grid;
+      grid-template-columns: 1fr 15fr;
+      row-gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  .pay {
+    margin-top: 3rem;
+
+    .info {
+      padding-top: .5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+  }
+}

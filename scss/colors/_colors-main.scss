@@ -1,0 +1,25 @@
+
+:root {
+  --color-primary: #6366F1;
+  --color-white: #FFFFFF;
+  --color-gray1: #F3F6FF;
+  --color-gray2: #EFF2FC;
+  --color-gray3: #E2E5F1;
+  --color-gray4: #D4D7E5;
+  --color-gray5: #B4B7C9;
+  --color-gray6: #9397AD;
+  --color-gray7: #565973;
+  --color-gray8: #33354D;
+  --color-gray9: #0B0F19;
+
+  --clr-bg: var(--color-white);
+  --clr-text-body: var(--color-gray7);
+  --clr-text-heading: var(--color-gray9);
+  --clr-text-nav: var(--color-gray8);
+  --clr-text-light: var(--color-gray6);
+  --clr-btn-circle: var(--color-white);
+  --clr-download-btn: var(--color-gray9);
+  --bg-box: var(--color-white);
+  --border-color: var(--color-gray3);
+  --border-color-2: var(--color-gray4);
+}

@@ -1,0 +1,29 @@
+.dark {
+  --clr-bg: var(--color-gray9);
+  --color-gray1: rgba(255, 255, 255, 0.04);
+  --clr-text-body: rgba(255, 255, 255, 0.7);
+  --clr-text-heading: var(--color-white);
+  --clr-text-nav: var(--color-white);
+  --clr-text-light:var(--color-gray6);
+  --clr-btn-circle: rgba(255, 255, 255, 0.05);
+  --clr-download-btn: #F3F6FF;
+  --bg-box: rgba(255, 255, 255, 0.04);
+  --border-color: rgba(255, 255, 255, 0.15);
+  --border-color-2: rgba(255, 255, 255, 0.2);
+
+  color-scheme: dark;
+
+  .show-light {
+    display: none;
+  }
+  .show-dark {
+    display: block;
+  }
+}
+
+.show-light {
+  display: block;
+}
+.show-dark {
+  display: none;
+}

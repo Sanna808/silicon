@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --container-padding: 1rem;
+  --transition-time: all 0.2s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body, section, div, header, footer, main, aside, nav, blockquote, p, span {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include text;
+  font-size: 1rem;
+  color: var(--clr-text-body);
+  background-color: var(--clr-bg);
+}
+
+h1, h2, h3, h4 {
+  color: var(--clr-text-heading);
+}
+
+.h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+}

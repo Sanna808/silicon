@@ -1,0 +1,32 @@
+.navbar {
+  display: none;
+}
+
+.nav-link {
+  color: var(--clr-text-nav);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.active {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+#auth-signin {
+  display: none;
+}
+
+header .container {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr auto auto;
+  gap: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
